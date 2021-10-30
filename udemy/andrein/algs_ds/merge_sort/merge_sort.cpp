@@ -31,14 +31,14 @@ vector<int> &merge_sort::run (vector<int> &array){
 	  if (array.size() == 1) {
 	    return array;
 	  }
-/*
+//*
 printf("array: ");
 for(int i = 0; i < array.size(); i++){
 	printf(" %d", array[i]);
 }
 printf("\n");
 return array;
-*/
+//*
 	  // Split Array in into right and left
 	  vector<int> left, right;
 
