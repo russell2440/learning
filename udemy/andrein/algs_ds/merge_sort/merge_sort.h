@@ -22,6 +22,13 @@ public:
 	merge_sort();
 	virtual ~merge_sort();
 	vector<int> &run (vector<int> &array);
+	void display(vector<int> &v){
+		printf("v-(%lu): ", v.size());
+		for(int i = 0; i < v.size(); i++){
+			printf(" %d", v[i]);
+		}
+		printf("\n");
+	}
 };
 
 } /* namespace rs */

@@ -28,21 +28,32 @@ vector<int> &merge_sort::_merge(vector<int> &left, vector<int> &right){
 }
 
 vector<int> &merge_sort::run (vector<int> &array){
-	  if (array.size() == 1) {
+display(array);
+	// Base case
+	if (array.size() == 1) {
 	    return array;
 	  }
-//*
-printf("array: ");
-for(int i = 0; i < array.size(); i++){
-	printf(" %d", array[i]);
-}
-printf("\n");
-return array;
-//*
-	  // Split Array in into right and left
-	  vector<int> left, right;
+	// Split Array in into right and left
+	vector<int> left, right;
+	unsigned int len = array.size();
+	left.resize(len/2,0);
+	if (0 == len%2){
+	  // Even split
+	  right.resize(len/2,0);
+	}
+	else{
+	  // Odd split
+	  right.resize(len/2+1,0);
+	}
+	// copy array contents
+	for(unsigned int i = 0; i < left.size(); i++){
+	  left[i] = array[i];
+	}
+	for(unsigned int i = 0; i < right.size(); i++){
+	  right[i] = array[(len/2)+i];
+	}
 
-	  return (_merge( run(left), run(right) ) );
+	return (_merge( run(left), run(right) ) );
 }
 
 
