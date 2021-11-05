@@ -17,11 +17,11 @@ using namespace std;
 namespace rs {
 
 class merge_sort  {
-	vector<int> &_merge(vector<int> &left, vector<int> &right);
+	vector<int> _merge(vector<int> left, vector<int> right);
 public:
 	merge_sort();
 	virtual ~merge_sort();
-	vector<int> &run (vector<int> &array);
+	vector<int> run (vector<int> array);
 	void display(vector<int> &v){
 		printf("v-(%lu): ", v.size());
 		for(int i = 0; i < v.size(); i++){

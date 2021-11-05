@@ -20,7 +20,8 @@ int main() {
 	<< endl
 	<< __PRETTY_FUNCTION__ << endl; // prints !!!Hello World!!!
 	merge_sort ms;
-	ms.run(vn);
+	vector<int> outp = ms.run(vn);
+	ms.display(outp);
 	return 0;
 
 }
