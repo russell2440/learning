@@ -56,7 +56,6 @@ vector<int> merge_sort::_merge(vector<int> left, vector<int> right){
 }
 
 vector<int> merge_sort::run (vector<int> array){
-display(array);
 	// Base case
 	if (array.size() == 1) {
 	    return array;
