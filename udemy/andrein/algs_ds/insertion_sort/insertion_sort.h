@@ -11,6 +11,7 @@
 #include <vector>
 #include <list>
 
+
 namespace rs {
 
 class insertion_sort  {

@@ -8,6 +8,7 @@
 #include "insertion_sort.h"
 
 
+
 namespace rs {
 
 insertion_sort::insertion_sort() {
