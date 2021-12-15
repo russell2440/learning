@@ -17,7 +17,6 @@ using namespace rs;
 #include "insertion_sort.h"
 
 
-
 int main() {
   int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
   unsigned int numbers_len = (sizeof(numbers)/sizeof(*numbers));
