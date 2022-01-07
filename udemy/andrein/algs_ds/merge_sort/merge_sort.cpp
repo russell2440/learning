@@ -31,8 +31,7 @@ vector<int> merge_sort::_merge(vector<int> left, vector<int> right){
 	for(vector<int>::iterator mit = merged.begin(); mit != merged.end(); mit++){
 		// Take from either left or right
 		if(lit != left.end() && rit != right.end()){
-			if(*lit < *rit)
-			{
+			if(*lit < *rit){
 				*mit = *lit;
 				lit++;
 			} else {
