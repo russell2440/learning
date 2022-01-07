@@ -14,7 +14,6 @@ using namespace rs;
 
 #include <cstdio>
 
-#include "insertion_sort.h"
 
 
 int main() {
@@ -35,7 +34,4 @@ int main() {
     printf(" %d", *p);
   }
   printf("\n");
-
-
-
 }
