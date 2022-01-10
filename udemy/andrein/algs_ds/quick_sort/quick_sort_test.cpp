@@ -8,13 +8,13 @@
 #include "quick_sort.h"
 
 int main(){
-	//const unsigned int numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
-	std::array<int, 11> na = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+	const unsigned int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+	std::vector<int> na(numbers, numbers+11);
 
 	//Select first and last index as 2nd and 3rd parameters
 	rs::quick_sort_t qs(na);
 
-	std::array<int, 11> ra = qs.exec();
+	std::vector<int> ra = qs.exec();
 
 	qs.display(ra);
 
