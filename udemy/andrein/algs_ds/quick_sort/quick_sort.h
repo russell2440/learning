@@ -12,26 +12,31 @@
 #include <memory>
 
 
-namespace rs {
+namespace rs
+{
 
-class quick_sort_t final {
-public:
-	quick_sort_t(std::vector<int>& array);
-	std::vector<int> exec();
-	void display(std::vector<int>& array);
+	class quick_sort_t final
+	{
+	public:
+		quick_sort_t(std::vector<int>& array)
+		: input_(array)
+		, result_()
+		{}
 
-	virtual ~quick_sort_t();
+		std::vector<int> exec();
+		void display(std::string fn, std::vector<int>& array);
 
-private:
 
-	//Select first and last index as 2nd and 3rd parameters
-	std::vector<int> do_sort(std::vector<int> &array, uint32_t left, uint32_t right);
-	void partition(std::vector<int>& array, uint32_t pivot, uint32_t left, uint32_t right);
-	void swap(std::vector<int>& array, uint32_t firstIndex, uint32_t secondIndex);
+	private:
 
-	std::vector<int> input_;
-	std::vector<int> result_;
-};
+		//Select first and last index as 2nd and 3rd parameters
+		std::vector<int> do_sort(std::vector<int> &array, uint32_t left, uint32_t right);
+		uint32_t partition(std::vector<int>& array, uint32_t pivot, uint32_t left, uint32_t right);
+		void swap(std::vector<int>& array, uint32_t firstIndex, uint32_t secondIndex);
+
+		std::vector<int> input_;
+		std::vector<int> result_;
+	};
 
 } /* namespace rs */
 
